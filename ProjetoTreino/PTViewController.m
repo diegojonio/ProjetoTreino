@@ -14,6 +14,7 @@
 
 @implementation PTViewController
 
+@synthesize fetchedResultsController, managedObjectContext;
 - (void)viewDidLoad
 {
     [super viewDidLoad];

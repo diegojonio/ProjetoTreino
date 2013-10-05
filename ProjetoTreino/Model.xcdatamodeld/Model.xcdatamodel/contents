@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12A269" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Coordenadas" representedClassName="Coordenadas" syncable="YES">
+        <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="log" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tempo" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Esporte" representedClassName="Esporte" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Treino" representedClassName="Treino" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="duracao" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="coordenada" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Coordenadas" syncable="YES"/>
+        <relationship name="esporte" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Esporte" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Esporte" positionX="358" positionY="198" width="128" height="60"/>
+        <element name="Coordenadas" positionX="216" positionY="180" width="128" height="88"/>
+        <element name="Treino" positionX="135" positionY="338" width="128" height="103"/>
+    </elements>
+</model>

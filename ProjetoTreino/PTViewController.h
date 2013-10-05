@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTViewController : UIViewController <NSXMLParserDelegate>
+#import <CoreData/CoreData.h>
+
+@interface PTViewController : UIViewController <NSFetchedResultsControllerDelegate> {
+    
+    NSFetchedResultsController *fetchedResultsController;
+    NSManagedObjectContext *managedObjectContext;
+    
+    /* (...Existing Application Code...) */
+}
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 
 @end
