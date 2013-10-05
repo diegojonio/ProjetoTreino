@@ -23,6 +23,7 @@
 		868CF14A18008FAC009CA938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CF12518008FAB009CA938 /* Foundation.framework */; };
 		868CF15218008FAC009CA938 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15018008FAC009CA938 /* InfoPlist.strings */; };
 		868CF15518008FAC009CA938 /* ProjetoTreinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */; };
+		868CF15F180090CD009CA938 /* treino1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15E180090CD009CA938 /* treino1.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		868CF15118008FAC009CA938 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		868CF15318008FAC009CA938 /* ProjetoTreinoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjetoTreinoTests.h; sourceTree = "<group>"; };
 		868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjetoTreinoTests.m; sourceTree = "<group>"; };
+		868CF15E180090CD009CA938 /* treino1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = treino1.xml; path = ../../../../Downloads/treino1.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		868CF12918008FAB009CA938 /* ProjetoTreino */ = {
 			isa = PBXGroup;
 			children = (
+				868CF15E180090CD009CA938 /* treino1.xml */,
 				868CF13218008FAB009CA938 /* PTAppDelegate.h */,
 				868CF13318008FAB009CA938 /* PTAppDelegate.m */,
 				868CF13B18008FAB009CA938 /* PTViewController.h */,
@@ -237,6 +240,7 @@
 				868CF13818008FAB009CA938 /* Default@2x.png in Resources */,
 				868CF13A18008FAB009CA938 /* Default-568h@2x.png in Resources */,
 				868CF14018008FAB009CA938 /* PTViewController.xib in Resources */,
+				868CF15F180090CD009CA938 /* treino1.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

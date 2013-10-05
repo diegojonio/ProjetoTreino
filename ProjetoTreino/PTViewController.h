@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTViewController : UIViewController
+@interface PTViewController : UIViewController <NSXMLParserDelegate>
 
 @end
