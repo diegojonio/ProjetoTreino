@@ -4,6 +4,7 @@
         <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="log" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="tempo" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="treino" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Treino" syncable="YES"/>
     </entity>
     <entity name="Esporte" representedClassName="Esporte" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,12 +12,11 @@
     <entity name="Treino" representedClassName="Treino" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="duracao" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="coordenada" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Coordenadas" syncable="YES"/>
         <relationship name="esporte" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Esporte" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Coordenadas" positionX="-9" positionY="156" width="128" height="105"/>
         <element name="Esporte" positionX="358" positionY="198" width="128" height="60"/>
-        <element name="Coordenadas" positionX="216" positionY="180" width="128" height="88"/>
-        <element name="Treino" positionX="135" positionY="338" width="128" height="103"/>
+        <element name="Treino" positionX="135" positionY="338" width="128" height="90"/>
     </elements>
 </model>

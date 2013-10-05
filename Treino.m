@@ -7,15 +7,13 @@
 //
 
 #import "Treino.h"
-#import "Coordenadas.h"
 #import "Esporte.h"
 
 
 @implementation Treino
 
-@dynamic duracao;
 @dynamic data;
+@dynamic duracao;
 @dynamic esporte;
-@dynamic coordenada;
 
 @end

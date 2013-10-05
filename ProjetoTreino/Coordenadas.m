@@ -7,6 +7,7 @@
 //
 
 #import "Coordenadas.h"
+#import "Treino.h"
 
 
 @implementation Coordenadas
@@ -14,5 +15,6 @@
 @dynamic lat;
 @dynamic log;
 @dynamic tempo;
+@dynamic treino;
 
 @end

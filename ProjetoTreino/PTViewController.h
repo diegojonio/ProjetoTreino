@@ -10,16 +10,20 @@
 
 #import <CoreData/CoreData.h>
 
-@interface PTViewController : UIViewController <NSFetchedResultsControllerDelegate> {
+#import "Treino.h"
+
+@interface PTViewController : UIViewController <NSFetchedResultsControllerDelegate, NSXMLParserDelegate> {
     
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
+    Treino *treino;
     
     /* (...Existing Application Code...) */
 }
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) Treino *treino;
 
 
 @end

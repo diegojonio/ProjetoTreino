@@ -7,6 +7,7 @@
 //
 
 #import "PTViewController.h"
+#import "Coordenadas.h"
 
 @interface PTViewController ()
 
@@ -38,6 +39,9 @@
     
     [xmlParser setDelegate:self];
     
+    treino = [[Treino alloc] init];
+    
+    
     [xmlParser parse];
 
 }
@@ -45,10 +49,19 @@
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 
 {
+    NSMutableArray *coordenadas = [[NSMutableArray alloc] init] ;
+    
+    Coordenadas *coordenada = [[Coordenadas alloc] init];
+    
     if ([elementName isEqualToString:@"trkpt"]) {
-        NSLog(@"lat = %@", [attributeDict valueForKey:@"lat"]);
-        NSLog(@"lon = %@", [attributeDict valueForKey:@"lon"]);
+        [coordenada setLat: [attributeDict valueForKey:@"lat"]];
+        [coordenada setLog:[attributeDict valueForKey:@"lon"]];
+        [coordenada setTreino:treino];
+        
+        NSLog(@"%@", attributeDict);
     }
+    
+    [coordenadas addObject:coordenada];
     
 }
 

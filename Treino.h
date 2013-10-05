@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Coordenadas, Esporte;
+@class Esporte;
 
 @interface Treino : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * duracao;
 @property (nonatomic, retain) NSDate * data;
+@property (nonatomic, retain) NSNumber * duracao;
 @property (nonatomic, retain) Esporte *esporte;
-@property (nonatomic, retain) Coordenadas *coordenada;
 
 @end
