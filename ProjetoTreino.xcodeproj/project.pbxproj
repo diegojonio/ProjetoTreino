@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865FF19918009EDF00A3C1AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865FF19818009EDF00A3C1AA /* CoreData.framework */; };
+		865FF19C1800A2CF00A3C1AA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 865FF19A1800A2CF00A3C1AA /* Model.xcdatamodeld */; };
 		868CF12418008FAB009CA938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CF12318008FAB009CA938 /* UIKit.framework */; };
 		868CF12618008FAB009CA938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CF12518008FAB009CA938 /* Foundation.framework */; };
 		868CF12818008FAB009CA938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CF12718008FAB009CA938 /* CoreGraphics.framework */; };
@@ -24,6 +26,9 @@
 		868CF15218008FAC009CA938 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15018008FAC009CA938 /* InfoPlist.strings */; };
 		868CF15518008FAC009CA938 /* ProjetoTreinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */; };
 		868CF15F180090CD009CA938 /* treino1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15E180090CD009CA938 /* treino1.xml */; };
+		868CF1681800A978009CA938 /* Treino.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF1671800A978009CA938 /* Treino.m */; };
+		868CF16B1800A99D009CA938 /* Esporte.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16A1800A99D009CA938 /* Esporte.m */; };
+		868CF16E1800A9A6009CA938 /* Coordenadas.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16D1800A9A6009CA938 /* Coordenadas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		865FF19818009EDF00A3C1AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		865FF19B1800A2CF00A3C1AA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		868CF12018008FAB009CA938 /* ProjetoTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868CF12318008FAB009CA938 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		868CF12518008FAB009CA938 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +67,12 @@
 		868CF15318008FAC009CA938 /* ProjetoTreinoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjetoTreinoTests.h; sourceTree = "<group>"; };
 		868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjetoTreinoTests.m; sourceTree = "<group>"; };
 		868CF15E180090CD009CA938 /* treino1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = treino1.xml; path = ../../../../Downloads/treino1.xml; sourceTree = "<group>"; };
+		868CF1661800A978009CA938 /* Treino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Treino.h; path = ../Treino.h; sourceTree = "<group>"; };
+		868CF1671800A978009CA938 /* Treino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Treino.m; path = ../Treino.m; sourceTree = "<group>"; };
+		868CF1691800A99D009CA938 /* Esporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Esporte.h; sourceTree = "<group>"; };
+		868CF16A1800A99D009CA938 /* Esporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Esporte.m; sourceTree = "<group>"; };
+		868CF16C1800A9A6009CA938 /* Coordenadas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordenadas.h; sourceTree = "<group>"; };
+		868CF16D1800A9A6009CA938 /* Coordenadas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordenadas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865FF19918009EDF00A3C1AA /* CoreData.framework in Frameworks */,
 				868CF12418008FAB009CA938 /* UIKit.framework in Frameworks */,
 				868CF12618008FAB009CA938 /* Foundation.framework in Frameworks */,
 				868CF12818008FAB009CA938 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +103,7 @@
 		868CF11718008FAB009CA938 = {
 			isa = PBXGroup;
 			children = (
+				865FF19818009EDF00A3C1AA /* CoreData.framework */,
 				868CF12918008FAB009CA938 /* ProjetoTreino */,
 				868CF14D18008FAC009CA938 /* ProjetoTreinoTests */,
 				868CF12218008FAB009CA938 /* Frameworks */,
@@ -126,6 +141,13 @@
 				868CF13C18008FAB009CA938 /* PTViewController.m */,
 				868CF13E18008FAB009CA938 /* PTViewController.xib */,
 				868CF12A18008FAB009CA938 /* Supporting Files */,
+				865FF19A1800A2CF00A3C1AA /* Model.xcdatamodeld */,
+				868CF16C1800A9A6009CA938 /* Coordenadas.h */,
+				868CF16D1800A9A6009CA938 /* Coordenadas.m */,
+				868CF1691800A99D009CA938 /* Esporte.h */,
+				868CF16A1800A99D009CA938 /* Esporte.m */,
+				868CF1661800A978009CA938 /* Treino.h */,
+				868CF1671800A978009CA938 /* Treino.m */,
 			);
 			path = ProjetoTreino;
 			sourceTree = "<group>";
@@ -278,6 +300,10 @@
 				868CF13018008FAB009CA938 /* main.m in Sources */,
 				868CF13418008FAB009CA938 /* PTAppDelegate.m in Sources */,
 				868CF13D18008FAB009CA938 /* PTViewController.m in Sources */,
+				865FF19C1800A2CF00A3C1AA /* Model.xcdatamodeld in Sources */,
+				868CF1681800A978009CA938 /* Treino.m in Sources */,
+				868CF16B1800A99D009CA938 /* Esporte.m in Sources */,
+				868CF16E1800A9A6009CA938 /* Coordenadas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +484,7 @@
 				868CF15A18008FAC009CA938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		868CF15B18008FAC009CA938 /* Build configuration list for PBXNativeTarget "ProjetoTreinoTests" */ = {
 			isa = XCConfigurationList;
@@ -466,8 +493,22 @@
 				868CF15D18008FAC009CA938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		865FF19A1800A2CF00A3C1AA /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				865FF19B1800A2CF00A3C1AA /* Model.xcdatamodel */,
+			);
+			currentVersion = 865FF19B1800A2CF00A3C1AA /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 868CF11818008FAB009CA938 /* Project object */;
 }
