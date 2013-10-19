@@ -25,10 +25,14 @@
 		868CF14A18008FAC009CA938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868CF12518008FAB009CA938 /* Foundation.framework */; };
 		868CF15218008FAC009CA938 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15018008FAC009CA938 /* InfoPlist.strings */; };
 		868CF15518008FAC009CA938 /* ProjetoTreinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */; };
-		868CF15F180090CD009CA938 /* treino1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 868CF15E180090CD009CA938 /* treino1.xml */; };
 		868CF1681800A978009CA938 /* Treino.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF1671800A978009CA938 /* Treino.m */; };
 		868CF16B1800A99D009CA938 /* Esporte.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16A1800A99D009CA938 /* Esporte.m */; };
 		868CF16E1800A9A6009CA938 /* Coordenadas.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16D1800A9A6009CA938 /* Coordenadas.m */; };
+		868F606D1812BD4000E10834 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 868F606B1812BD4000E10834 /* MapAnnotation.m */; };
+		868F606F1812BD9200E10834 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868F606E1812BD9200E10834 /* MapKit.framework */; };
+		868F60741812C11500E10834 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868F60731812C11500E10834 /* ViewController.m */; };
+		868F60781812C9C500E10834 /* treino1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 868F60771812C9C500E10834 /* treino1.xml */; };
+		868F607A1812D59100E10834 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868F60791812D59100E10834 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,13 +70,19 @@
 		868CF15118008FAC009CA938 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		868CF15318008FAC009CA938 /* ProjetoTreinoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjetoTreinoTests.h; sourceTree = "<group>"; };
 		868CF15418008FAC009CA938 /* ProjetoTreinoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjetoTreinoTests.m; sourceTree = "<group>"; };
-		868CF15E180090CD009CA938 /* treino1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = treino1.xml; path = ../../../../Downloads/treino1.xml; sourceTree = "<group>"; };
 		868CF1661800A978009CA938 /* Treino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Treino.h; path = ../Treino.h; sourceTree = "<group>"; };
 		868CF1671800A978009CA938 /* Treino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Treino.m; path = ../Treino.m; sourceTree = "<group>"; };
 		868CF1691800A99D009CA938 /* Esporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Esporte.h; sourceTree = "<group>"; };
 		868CF16A1800A99D009CA938 /* Esporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Esporte.m; sourceTree = "<group>"; };
 		868CF16C1800A9A6009CA938 /* Coordenadas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordenadas.h; sourceTree = "<group>"; };
 		868CF16D1800A9A6009CA938 /* Coordenadas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordenadas.m; sourceTree = "<group>"; };
+		868F606B1812BD4000E10834 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapAnnotation.m; path = ../../../../Downloads/MapAnnotation.m; sourceTree = "<group>"; };
+		868F606C1812BD4000E10834 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapAnnotation.h; path = ../../../../Downloads/MapAnnotation.h; sourceTree = "<group>"; };
+		868F606E1812BD9200E10834 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		868F60721812C11500E10834 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../Mapa2/Mapa2/ViewController.h; sourceTree = "<group>"; };
+		868F60731812C11500E10834 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../Mapa2/Mapa2/ViewController.m; sourceTree = "<group>"; };
+		868F60771812C9C500E10834 /* treino1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = treino1.xml; path = ../../../../Downloads/treino1.xml; sourceTree = "<group>"; };
+		868F60791812D59100E10834 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868F606F1812BD9200E10834 /* MapKit.framework in Frameworks */,
 				868CF14818008FAC009CA938 /* SenTestingKit.framework in Frameworks */,
 				868CF14918008FAC009CA938 /* UIKit.framework in Frameworks */,
 				868CF14A18008FAC009CA938 /* Foundation.framework in Frameworks */,
@@ -103,6 +114,7 @@
 		868CF11718008FAB009CA938 = {
 			isa = PBXGroup;
 			children = (
+				868F606E1812BD9200E10834 /* MapKit.framework */,
 				865FF19818009EDF00A3C1AA /* CoreData.framework */,
 				868CF12918008FAB009CA938 /* ProjetoTreino */,
 				868CF14D18008FAC009CA938 /* ProjetoTreinoTests */,
@@ -134,12 +146,17 @@
 		868CF12918008FAB009CA938 /* ProjetoTreino */ = {
 			isa = PBXGroup;
 			children = (
-				868CF15E180090CD009CA938 /* treino1.xml */,
+				868F60771812C9C500E10834 /* treino1.xml */,
 				868CF13218008FAB009CA938 /* PTAppDelegate.h */,
 				868CF13318008FAB009CA938 /* PTAppDelegate.m */,
 				868CF13B18008FAB009CA938 /* PTViewController.h */,
 				868CF13C18008FAB009CA938 /* PTViewController.m */,
 				868CF13E18008FAB009CA938 /* PTViewController.xib */,
+				868F60721812C11500E10834 /* ViewController.h */,
+				868F60731812C11500E10834 /* ViewController.m */,
+				868F60791812D59100E10834 /* ViewController.xib */,
+				868F606B1812BD4000E10834 /* MapAnnotation.m */,
+				868F606C1812BD4000E10834 /* MapAnnotation.h */,
 				868CF12A18008FAB009CA938 /* Supporting Files */,
 				865FF19A1800A2CF00A3C1AA /* Model.xcdatamodeld */,
 				868CF16C1800A9A6009CA938 /* Coordenadas.h */,
@@ -262,7 +279,8 @@
 				868CF13818008FAB009CA938 /* Default@2x.png in Resources */,
 				868CF13A18008FAB009CA938 /* Default-568h@2x.png in Resources */,
 				868CF14018008FAB009CA938 /* PTViewController.xib in Resources */,
-				868CF15F180090CD009CA938 /* treino1.xml in Resources */,
+				868F60781812C9C500E10834 /* treino1.xml in Resources */,
+				868F607A1812D59100E10834 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				868CF15518008FAC009CA938 /* ProjetoTreinoTests.m in Sources */,
+				868F606D1812BD4000E10834 /* MapAnnotation.m in Sources */,
+				868F60741812C11500E10834 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
