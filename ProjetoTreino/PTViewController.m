@@ -8,6 +8,8 @@
 
 #import "PTViewController.h"
 #import "Coordenadas.h"
+#import "Esporte.h"
+#import "PTAppDelegate.h"
 
 @interface PTViewController ()
 
@@ -15,14 +17,14 @@
 
 @implementation PTViewController
 
-@synthesize fetchedResultsController, managedObjectContext;
+@synthesize fetchedResultsController, managedObjectContext, treino, coordenadas;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     NSLog(@"Chegou aqui");
 
-    [self cadastrarTreinos];
+//    [self cadastrarTreinos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,31 +40,80 @@
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
     [xmlParser setDelegate:self];
+    PTAppDelegate* deleg = (PTAppDelegate*)[UIApplication sharedApplication].delegate;
+    //treino = [[Treino alloc] init];
+    //treino = [NSEntityDescription entityForName:@"Treino" inManagedObjectContext:deleg.managedObjectContext];
+    //treino = [NSManagedObject i]
     
-    treino = [[Treino alloc] init];
-    
+    treino = [NSEntityDescription
+                            insertNewObjectForEntityForName:@"Treino"
+                            inManagedObjectContext:deleg.managedObjectContext];
+
+    coordenadas = [[NSMutableArray alloc] init];
     
     [xmlParser parse];
+    
+    NSLog(@"%@", treino);
+    NSLog(@"%@", coordenadas);
+    
+    
+//    for (Coordenadas *coord in  coordenadas) {
+//        NSLog(@"Coodenadas de Latitude: %@", coord.lat);
+//    }
+    
+    [deleg saveContext];
 
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 
 {
-    NSMutableArray *coordenadas = [[NSMutableArray alloc] init] ;
     
-    Coordenadas *coordenada = [[Coordenadas alloc] init];
+    PTAppDelegate* deleg = (PTAppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    if ([elementName isEqualToString:@"metadata"]) {
+        NSDateFormatter *df = [[NSDateFormatter alloc]init];
+        [df setDateFormat:@"yyyy-MM-dd'T'hh:mm:ss'Z'"];
+        NSLog(@"DICIONARIO: %@", attributeDict);
+        NSString *valueForTime = [attributeDict valueForKey:@"time"];
+        NSLog(@"%@", valueForTime);
+        NSString *date = [valueForTime substringFromIndex:10];
+        NSString *time = [[date substringFromIndex:12] substringToIndex:19];
+        
+        NSString *dateTime = [date stringByAppendingFormat:@" %@", time];
+        
+        [treino setData: [df dateFromString:dateTime]];
+    }
+    
+    
+    if ([elementName isEqualToString:@"trk"]) {
+        
+        Esporte *esporte = [NSEntityDescription
+                            insertNewObjectForEntityForName:@"Esporte"
+                            inManagedObjectContext:deleg.managedObjectContext];
+        
+        [esporte setNome: [attributeDict valueForKey:@"type"]];
+        NSLog(@"%@", [esporte nome]);
+        [treino setEsporte:esporte];
+    }
+    
     
     if ([elementName isEqualToString:@"trkpt"]) {
-        [coordenada setLat: [attributeDict valueForKey:@"lat"]];
-        [coordenada setLog:[attributeDict valueForKey:@"lon"]];
+        Coordenadas *coordenada = [NSEntityDescription
+                                   insertNewObjectForEntityForName:@"Coordenadas"
+                                   inManagedObjectContext:deleg.managedObjectContext];
+
+        NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+        [nf setNumberStyle:NSNumberFormatterDecimalStyle ];
+        [coordenada setLat: [nf numberFromString:[attributeDict valueForKey:@"lat"]]];
+        [coordenada setLog:[nf numberFromString:[attributeDict valueForKey:@"lon"]]];
+//       [coordenada setTempo:[attributeDict valueForKey:@"time"]];
         [coordenada setTreino:treino];
+        [coordenadas addObject:coordenada];
         
         NSLog(@"%@", attributeDict);
     }
-    
-    [coordenadas addObject:coordenada];
-    
+
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName

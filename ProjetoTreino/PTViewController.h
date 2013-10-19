@@ -17,6 +17,7 @@
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
     Treino *treino;
+    NSMutableArray *coordenadas;
     
     /* (...Existing Application Code...) */
 }
@@ -24,6 +25,7 @@
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) Treino *treino;
+@property (nonatomic, strong) NSMutableArray *coordenadas;
 
 
 @end
