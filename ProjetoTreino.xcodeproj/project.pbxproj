@@ -29,6 +29,9 @@
 		868CF1681800A978009CA938 /* Treino.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF1671800A978009CA938 /* Treino.m */; };
 		868CF16B1800A99D009CA938 /* Esporte.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16A1800A99D009CA938 /* Esporte.m */; };
 		868CF16E1800A9A6009CA938 /* Coordenadas.m in Sources */ = {isa = PBXBuildFile; fileRef = 868CF16D1800A9A6009CA938 /* Coordenadas.m */; };
+		86F8715B1812D23E00759CAF /* HistTreinoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F871581812D23E00759CAF /* HistTreinoCell.m */; };
+		86F8715C1812D23E00759CAF /* HistTreinoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F8715A1812D23E00759CAF /* HistTreinoCell.xib */; };
+		86F8715E1812D48500759CAF /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F8715D1812D48500759CAF /* ic_launcher.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,10 @@
 		868CF16A1800A99D009CA938 /* Esporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Esporte.m; sourceTree = "<group>"; };
 		868CF16C1800A9A6009CA938 /* Coordenadas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordenadas.h; sourceTree = "<group>"; };
 		868CF16D1800A9A6009CA938 /* Coordenadas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordenadas.m; sourceTree = "<group>"; };
+		86F871581812D23E00759CAF /* HistTreinoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistTreinoCell.m; path = ../../DiegoContatos/DiegoContatos/HistTreinoCell.m; sourceTree = "<group>"; };
+		86F871591812D23E00759CAF /* HistTreinoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistTreinoCell.h; path = ../../DiegoContatos/DiegoContatos/HistTreinoCell.h; sourceTree = "<group>"; };
+		86F8715A1812D23E00759CAF /* HistTreinoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistTreinoCell.xib; path = ../../DiegoContatos/DiegoContatos/HistTreinoCell.xib; sourceTree = "<group>"; };
+		86F8715D1812D48500759CAF /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_launcher.png; path = ../../DiegoContatos/DiegoContatos/ic_launcher.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +142,15 @@
 			isa = PBXGroup;
 			children = (
 				868CF15E180090CD009CA938 /* treino1.xml */,
+				86F8715D1812D48500759CAF /* ic_launcher.png */,
 				868CF13218008FAB009CA938 /* PTAppDelegate.h */,
 				868CF13318008FAB009CA938 /* PTAppDelegate.m */,
 				868CF13B18008FAB009CA938 /* PTViewController.h */,
 				868CF13C18008FAB009CA938 /* PTViewController.m */,
 				868CF13E18008FAB009CA938 /* PTViewController.xib */,
+				86F871581812D23E00759CAF /* HistTreinoCell.m */,
+				86F871591812D23E00759CAF /* HistTreinoCell.h */,
+				86F8715A1812D23E00759CAF /* HistTreinoCell.xib */,
 				868CF12A18008FAB009CA938 /* Supporting Files */,
 				865FF19A1800A2CF00A3C1AA /* Model.xcdatamodeld */,
 				868CF16C1800A9A6009CA938 /* Coordenadas.h */,
@@ -263,6 +274,7 @@
 				868CF13A18008FAB009CA938 /* Default-568h@2x.png in Resources */,
 				868CF14018008FAB009CA938 /* PTViewController.xib in Resources */,
 				868CF15F180090CD009CA938 /* treino1.xml in Resources */,
+				86F8715E1812D48500759CAF /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				868CF15218008FAC009CA938 /* InfoPlist.strings in Resources */,
+				86F8715C1812D23E00759CAF /* HistTreinoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				868CF15518008FAC009CA938 /* ProjetoTreinoTests.m in Sources */,
+				86F8715B1812D23E00759CAF /* HistTreinoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
