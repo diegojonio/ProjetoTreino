@@ -10,6 +10,7 @@
 #import "Coordenadas.h"
 #import "Esporte.h"
 #import "PTAppDelegate.h"
+#import "HistTreinoCell.h"
 
 @interface PTViewController ()
 
@@ -17,12 +18,17 @@
 
 @implementation PTViewController
 
-@synthesize fetchedResultsController, managedObjectContext, treino, coordenadas;
+@synthesize fetchedResultsController, managedObjectContext, treinos, treino, coordenadas, tag, currentStringValue;
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    NSLog(@"Chegou aqui");
+    histTreino.delegate = self;
+    histTreino.dataSource = self;
+    
+    [self consultarTreinos];
 
 //    [self cadastrarTreinos];
 }
@@ -32,6 +38,74 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) consultarTreinos
+{
+    PTAppDelegate *deleg = (PTAppDelegate*) [UIApplication sharedApplication].delegate;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSError *error;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Treino"
+                                              inManagedObjectContext:deleg.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSArray *fetchedOject = [deleg.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    treinos = [[NSMutableArray alloc ] initWithArray: fetchedOject];
+
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [treinos count];
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil indice:indexPath.row];
+//    
+//    [[self navigationController] pushViewController:secondView animated:YES];
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *uniqueIdentifier = @"HistTreinoCell";
+    HistTreinoCell *cell = nil;
+    
+    cell = (HistTreinoCell*) [histTreino dequeueReusableCellWithIdentifier:uniqueIdentifier];
+    
+    if (!cell)
+    {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HistTreinoCell" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects)
+        {
+            if ([currentObject isKindOfClass:[UITableViewCell class]])
+            {
+                cell = (HistTreinoCell *) currentObject;
+                break;
+            }
+        }
+    }
+    
+    cell = (HistTreinoCell *) cell;
+    
+    cell.fotoExercicio.image = [UIImage imageNamed:@"ic_launcher.png"];
+    
+    /*NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+     NSError *error;
+     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Contato"
+     inManagedObjectContext:deleg.managedObjectContext];
+     [fetchRequest setEntity:entity];
+     
+     NSArray *fetchedOject = [deleg.managedObjectContext executeFetchRequest:fetchRequest error:&error];*/
+    Treino *t = [treinos objectAtIndex:indexPath.row];
+    cell.exercicio.text = t.esporte.nome;
+    return cell;
+}
+
+
 
 - (void) cadastrarTreinos
 {
@@ -52,16 +126,16 @@
     coordenadas = [[NSMutableArray alloc] init];
     
     [xmlParser parse];
-    
-    NSLog(@"%@", treino);
-    NSLog(@"%@", coordenadas);
+
+//    NSLog(@"%@", treino);
+//    NSLog(@"%@", coordenadas);
     
     
 //    for (Coordenadas *coord in  coordenadas) {
 //        NSLog(@"Coodenadas de Latitude: %@", coord.lat);
 //    }
     
-    [deleg saveContext];
+//    [deleg saveContext];
 
 }
 
@@ -83,18 +157,14 @@
         NSString *dateTime = [date stringByAppendingFormat:@" %@", time];
         
         [treino setData: [df dateFromString:dateTime]];
+        return;
     }
     
     
-    if ([elementName isEqualToString:@"trk"]) {
+    if ([elementName isEqualToString:@"Type"]) {
+        tag = @"Esporte";
+        return;
         
-        Esporte *esporte = [NSEntityDescription
-                            insertNewObjectForEntityForName:@"Esporte"
-                            inManagedObjectContext:deleg.managedObjectContext];
-        
-        [esporte setNome: [attributeDict valueForKey:@"type"]];
-        NSLog(@"%@", [esporte nome]);
-        [treino setEsporte:esporte];
     }
     
     
@@ -111,13 +181,36 @@
         [coordenada setTreino:treino];
         [coordenadas addObject:coordenada];
         
-        NSLog(@"%@", attributeDict);
+//        NSLog(@"%@", attributeDict);
+        return;
     }
 
 }
 
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if (!currentStringValue) {
+        // currentStringValue is an NSMutableString instance variable
+        currentStringValue = [[NSMutableString alloc] initWithCapacity:50];
+    }
+    [currentStringValue appendString:string];
+}
+
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
+    PTAppDelegate* deleg = (PTAppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    if([tag isEqualToString:@"Esporte"]) {
+        NSLog(@"%@", currentStringValue);
+        
+        Esporte *esporte = [NSEntityDescription
+                                   insertNewObjectForEntityForName:@"Coordenadas"
+                                   inManagedObjectContext:deleg.managedObjectContext];
+        
+        [esporte setNome:currentStringValue];
+        [treino setEsporte:esporte];
+    }
+    
+    currentStringValue = nil;
 }
 
 @end
